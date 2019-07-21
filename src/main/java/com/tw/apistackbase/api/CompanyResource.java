@@ -18,6 +18,7 @@ public class CompanyResource {
     
     @PostMapping()
     public Company add(@RequestBody Company company) {
+        System.out.println("test"+company.getEmployeeList().get(0));
         return companyRepository.save(company);
     }
     @PutMapping
